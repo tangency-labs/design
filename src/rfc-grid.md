@@ -47,20 +47,9 @@ The interim fix (tangency-labs/solidcraft#15760) makes both read as buttons:
 
 ## 2. Goals
 
-```text
- +---+----------+------+--------------+-------------------+---------+----------+
- |   | Name ^   | Unit | Expression   | Value             | Comment | + Column |
- +---+----------+------+--------------+-------------------+---------+----------+
- | 1 | width    | mm   | 40 mm        | 40 mm  (read-only)|         |          |
- | 2 | height   | mm   |[width / 2   ]|[20 mm            ]|         |          |
- | 3 | depth    | mm   |[[height + 5]]|[25 mm            ]| cursor  |          |
- | 4 | hole_d   | mm   | depth *      | ! expected a value|         |          |
- +---+----------+------+--------------+-------------------+---------+----------+
- |   | + Add parameter                                                         |
- +---+-------------------------------------------------------------------------+
-```
+![Mockup of the grid: a range shaded over Expression and Value, a cursor ring on one cell, an inline error, and the Add parameter and Add column buttons](images/grid/grid-mockup.png)
 
-Mockup. `[ ]` marks the range (Expression and Value over rows 2 to 3, shaded). `[[ ]]` is the cursor on Expression, row 3 (accent ring). Value is read-only (dim). Row 4 fails its check and shows the message in place. The add row and the add-column header use the button style from the in-flight PR, and they are the only add controls.
+*Mockup, not built yet.* The range is Expression and Value over rows 2 to 3 (shaded). The cursor is on Expression, row 3 (accent ring). Value is read-only (dim). Row 4 fails its check and shows the message in place. The add row and the add-column header use the button style from the in-flight PR, and they are the only add controls.
 
 | Area | Behaviour |
 |---|---|
