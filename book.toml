@@ -1,0 +1,14 @@
+[book]
+title = "SolidCraft Design"
+description = "SolidCraft design docs and RFC drafts."
+authors = ["SolidCraft contributors"]
+language = "en"
+src = "src"
+
+[output.html]
+git-repository-url = "https://github.com/tangency-labs/design"
+edit-url-template = "https://github.com/tangency-labs/design/edit/main/{path}"
+site-url = "/"
+
+[output.html.search]
+enable = true
