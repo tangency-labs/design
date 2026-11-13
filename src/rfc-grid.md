@@ -15,6 +15,22 @@ Every table re-implements editing, cell by cell: its own focus checks, its own E
 
 Evidence from my own use: I couldn't find *Add parameter* (a dashed line at the bottom of one section) or the tiny **+** header that adds a configuration column. Tab didn't select the next cell's text. Enter committed but didn't move down. Two PRs in flight fix the first and the last two, app-wide. This design takes them as the baseline and makes that behaviour part of the grid, so the next table gets it for free.
 
+### What it looks like today
+
+The Parameters window: *Add parameter* is the faint dashed row under "No matching rows."
+
+![Parameters window today, with the faint Add parameter row](images/grid/params-add-row-today.png)
+
+The Configuration Table: adding a column is the tiny **+** at the right end of the header.
+
+![Configuration Table today, with the small plus in the header](images/grid/before-config-dark-1280x720.png)
+
+The interim fix (tangency-labs/solidcraft#15760) makes both read as buttons:
+
+![Parameters with the Add parameter button](images/grid/after-params-dark-1280x720.png)
+
+![Configuration Table with the Add column button](images/grid/after-config-dark-1280x720.png)
+
 ### What exists today
 
 `crates/ui-kit/src/table.rs` (555 lines) already does a lot of this well, and the grid keeps all of it:
